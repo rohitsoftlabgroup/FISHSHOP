@@ -6,27 +6,25 @@ if (session_status() == PHP_SESSION_NONE) {
 ?>
 
 <div class="navbar-wrapper">
+    <!-- External Navbar CSS -->
     <link rel="stylesheet" href="styles/navbar.css">
 
-    <!-- Bootstrap 5 CSS (Updated Integrity Hash) -->
+    <!-- Bootstrap 5 CSS (Integrity Hash Included) -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <!-- Bootstrap Icons (Optional) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
-    <div class="header">
-        <h1>Fish Equipment Shop</h1>
-    </div>
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.php">FISHEE SHOP</a>
 
-            <!-- Toggler Button (CORRECT POSITION) -->
+            <!-- Toggler Button (Hamburger Icon) -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
+            <!-- Collapsible Content -->
             <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
                 <ul class="navbar-nav mb-2 mb-lg-0 text-center">
                     <li class="nav-item">
@@ -61,5 +59,5 @@ if (session_status() == PHP_SESSION_NONE) {
     </nav>
 </div>
 
-<!-- Bootstrap 5 JS Bundle (Updated Integrity Hash) -->
+<!-- Bootstrap 5 JS Bundle (Integrity Hash Included) -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

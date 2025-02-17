@@ -92,28 +92,56 @@ html, body {
     margin-left: auto !important;
 }
 
-/* Search Bar Styles */
-.navbar-wrapper .search-bar {
+/* Profile Management */
+.navbar-wrapper .dropdown-menu {
+    min-width: 180px;
+    background-color: #343a40;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none; /* Initially hide the dropdown */
+    position: absolute;
+    z-index: 1000;
+}
+
+.navbar-wrapper .dropdown-item {
+    color: white;
+    font-size: 1rem;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-wrapper .dropdown-item:hover {
+    background-color: #ff6f61;
+    border-radius: 5px;
+}
+
+.navbar-wrapper .nav-link.dropdown-toggle {
     display: flex;
     align-items: center;
-    margin-left: auto;
+    padding: 10px 15px;
 }
 
-.navbar-wrapper .search-bar input {
-    padding: 5px 10px;
-    border-radius: 5px;
-    border: 1px solid #ced4da;
+.navbar-wrapper .nav-link img {
+    border-radius: 50%;
+    margin-right: 10px;
 }
 
-.navbar-wrapper .search-bar button {
-    border: none;
-    background-color: transparent;
-    padding: 5px 10px;
-    cursor: pointer;
+.navbar-wrapper .dropdown-menu .dropdown-item:last-child {
+    border-top: 1px solid #ddd;
 }
 
-.navbar-wrapper .search-bar button i {
-    color: white;
+/* Desktop View - Navbar with Hover Dropdown */
+@media (min-width: 992px) {
+    /* Ensure dropdown displays on hover for desktop */
+    .navbar-wrapper .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .navbar-wrapper .nav-item.dropdown .dropdown-menu {
+        display: none;
+    }
 }
 
 /* Mobile View - Navbar Toggle */
@@ -146,4 +174,30 @@ html, body {
     .navbar-wrapper .search-bar button {
         width: auto;
     }
+
+    /* Ensure dropdown shows when clicked (for mobile) */
+    .navbar-wrapper .nav-item.dropdown.show .dropdown-menu {
+        display: block;
+    }
+
+    .navbar-wrapper .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .navbar-wrapper .nav-item.dropdown .dropdown-menu {
+        display: none;
+    }
+}
+
+/* Reset Navbar Toggler Icon */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+/* Optional: Make Toggler Icon visible on dark backgrounds */
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
 }
